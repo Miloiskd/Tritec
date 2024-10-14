@@ -8,6 +8,9 @@ try:
     from app.tests.IntegerToRomanTests import IntegerToRomanTests
     from app.tests.RomanToIntegerTests import RomanToIntegerTests
     from app.tests.MoneyToEnglishTests import MoneyToEnglishTests
+    from app.tests.MergeSortTest import MergeSortTests
+    from app.tests.SpiralMatrixTest import SpiralMatrixTest
+    from app.tests.TowerOfHanoiTest import TowerOfHanoiTests
 except ImportError as e:
     print(f"Error: Unable to import. {str(e)}")
 
@@ -59,6 +62,18 @@ class CodesController():
                     tests_moneyToEnglish = MoneyToEnglishTests()
                     print(tests_moneyToEnglish)
                     return tests_moneyToEnglish.tests(self.name)
+                
+                if self.name == "MergeSort":
+                    tests_mergesort =  MergeSortTests()  
+                    return tests_mergesort.tests(self.name)  
+                
+                if self.name == "SpiralMatrix":
+                    tests_SpiralMatrix =  SpiralMatrixTest()  
+                    return tests_SpiralMatrix.tests(self.name)  
+                
+                if self.name == "TowerOfHanoi":
+                    tests_towerofhanoi =  TowerOfHanoiTests()  
+                    return tests_towerofhanoi.tests(self.name) 
 
             except ImportError as e:
                 print(f"Error al cargar el módulo {self.name}: {e}")

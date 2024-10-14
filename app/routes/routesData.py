@@ -60,6 +60,25 @@ def home():
             'image_url': url_for('static', filename='img/moneyToEnglish-logo.png'),
             'stars': 4
         },
+        {
+            'title': 'SpiralMatrix',
+            'description': 'Dada una matriz, imprime todos los elementos en orden espiral..',
+            'image_url': url_for('static', filename='img/matrix.png'),
+            'stars': 4
+        },
+        {
+            'title': 'TowerOfHanoi',
+            'description': 'El algoritmo ToweOfHanoi Resuelve el clásico problema de la Torre de Hanoi moviendo todos los discos de una torre a otra usando una tercera torre como auxiliar',
+            'image_url': url_for('static', filename='img/hanoi.png'),
+            'stars': 4
+        },
+         {
+            'title': 'MergeSort',
+            'description': 'el algoritmo de Merge Sort (ordenamiento por mezcla) es un algoritmo de ordenamiento eficiente y es un buen ejemplo de un algoritmo de divide y vencerás.',
+            'image_url': url_for('static', filename='img/soft.png'),
+            'stars': 4
+        },
+        
     ]
 
     return render_template('index.html', cards=enumerate(cards))
@@ -132,6 +151,36 @@ def problems():
                 'c#': {'code': 'x'}
             }
         },
+        {
+            'title': 'SpiralMatrix',
+            'problem': 'Dada una matriz en el order espiral, es decir desde la esquina superior izquierda, hacia la derecha, luego hacia abajo, luego a la izquierda y finalmente hacia arriba, repitiendo este patrón hasta recorrer toda la matriz \n\n Límites:  Tendremos cuatro "límites" que nos ayudarán a controlar la dirección en la que estamos moviéndonos. (Top, bottom, left, right) ',
+            'image_url': url_for('static', filename='img/matrix.png'),
+            'stars': 4,
+            'languages': {
+                'python': {'code': 'def SpiralMatrix(matrix):\n\n    #ESCRIBE TU CÓDIGO AQUÍ'},
+                'c#': {'code': 'x'}
+            }
+        },
+        {
+            'title': 'TowerOfHanoi',
+            'problem': 'El problema de la Torre de Hanoi consiste en tres pilares (o varillas) y un número de discos de diferentes tamaños que pueden deslizarse sobre cualquier pilar. El objetivo es mover todos los discos de un pilar inicial a un pilar de destino, siguiendo estas reglas: \n\n 1. Solo se puede mover un disco a la vez. \n\n 2. Cada movimiento consiste en tomar el disco superior de una de las pilas y colocarlo en otra pila. \n\n 3. No se puede colocar un disco más grande encima de uno más pequeño. ',
+            'image_url': url_for('static', filename='img/hanoi.png'),
+            'stars': 3,
+            'languages': {
+                'python': {'code': 'def def tower_of_hanoi(n, source, target, auxiliary):\n\n    #ESCRIBE TU CÓDIGO AQUÍ'},
+                'c#': {'code': 'x'}
+            }
+        },  
+        {
+            'title': 'MergeSort',
+            'problem': 'Merge Sort es un algoritmo que divide repetidamente una lista en dos mitades, las ordena de forma recursiva y finalmente las mezcla para producir una lista ordenada ',
+            'image_url': url_for('static', filename='img/soft.png'),
+            'stars': 2,
+            'languages': {
+                'python': {'code': 'def def tower_of_hanoi(n, source, target, auxiliary):\n\n    #ESCRIBE TU CÓDIGO AQUÍ'},
+                'c#': {'code': 'x'}
+            }
+        },      
     ]
 
     for problem in problems:
